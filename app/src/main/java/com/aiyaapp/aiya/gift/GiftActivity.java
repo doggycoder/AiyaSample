@@ -37,6 +37,8 @@ public class GiftActivity extends AppCompatActivity {
                 if(i== Const.MSG_TYPE_INFO){
                     if(i1== AiyaGiftEffect.MSG_STAT_EFFECTS_END){
                         Log.e("wuwang","播放完成");
+                    }else if(i1==AiyaGiftEffect.MSG_STAT_EFFECTS_START){
+                        Log.e("wuwang","播放开始");
                     }
                 }else if(i==Const.MSG_TYPE_ERROR){
                     Log.e("wuwang","错误："+i+"/"+i1+"/"+s);
