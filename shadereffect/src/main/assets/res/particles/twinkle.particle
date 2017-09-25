@@ -1,0 +1,43 @@
+particle twinkle
+{
+    sprite
+    {
+        path = twinkle.png
+        width = 102
+        height = 102
+        blending = ADDITIVE
+        animated = true
+        looped = true
+        frameCount = 100
+        frameRandomOffset = 100
+        frameDuration = 10
+    }
+
+    particleCountMax = 300
+    emissionRate = 30
+    ellipsoid = true
+    orbitPosition = true
+    orbitVelocity = true
+    orbitAcceleration = false
+    sizeStartMin = 0.01
+    sizeStartMax = 0.03
+    sizeEndMin = 0.01
+    sizeEndMax = 0.03
+    energyMin = 10000
+    energyMax = 10000
+    colorStart = 1.0, 1.0, 1.0, 1.0
+    colorStartVar = 0.0, 0, 0, 0
+    colorEnd = 1.0, 1.0, 1.0, 1.0
+    colorEndVar = 0, 0, 0, 0
+    position = 0, 0, 0
+    positionVar = 1.5, 1.5, 800
+    velocity = 0, 0, 0
+    velocityVar = 0.01, 0.01, 1.0
+    acceleration = 0, 0, 0
+    accelerationVar = 0, 0, 0
+    rotationPerParticleSpeedMin = -1.0
+    rotationPerParticleSpeedMax = 1.0
+	rotationSpeedMin = -1.0
+	rotationSpeedMax = 1.0
+	
+}

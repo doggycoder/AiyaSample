@@ -1,0 +1,43 @@
+particle cross
+{
+    sprite
+    {
+        path = cross.png
+        width = 64
+        height = 64
+        blending = ADDITIVE
+        animated = false
+        looped = false
+        frameCount = 64
+        frameRandomOffset = 64
+        frameDuration = 25
+    }
+
+    particleCountMax = 10
+    emissionRate = 0
+    ellipsoid = true
+    orbitPosition = true
+    orbitVelocity = true
+    orbitAcceleration = false
+    sizeStartMin = 0.08
+    sizeStartMax = 0.1
+    sizeEndMin = 0.08
+    sizeEndMax = 0.1
+    energyMin = 40000
+    energyMax = 40000
+    colorStart = 1.0, 1.0, 1.0, 1.0
+    colorStartVar = 0.0, 0, 0, 0
+    colorEnd = 1.0, 1.0, 1.0, 1.0
+    colorEndVar = 0, 0, 0, 0
+    position = 0, 0, 0
+    positionVar = 1.5, 1.5, 700
+    velocity = 0, 0, 0
+    velocityVar = 0.0, 0.0, 0.0
+    acceleration = 0, 0, 0
+    accelerationVar = 0, 0, 0
+    rotationPerParticleSpeedMin = -1.0
+    rotationPerParticleSpeedMax = 1.0
+	rotationSpeedMin = -1.0
+	rotationSpeedMax = 1.0
+	
+}

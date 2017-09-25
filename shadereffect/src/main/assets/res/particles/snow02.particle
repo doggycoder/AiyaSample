@@ -1,0 +1,43 @@
+particle snow02
+{
+    sprite
+    {
+        path = snow02.png
+        width = 256
+        height = 256
+        blending = TRANSPARENT
+        animated = false
+        looped = false
+        frameCount = 1
+        frameRandomOffset = 0
+        frameDuration = 0
+    }
+
+    particleCountMax = 100
+    emissionRate = 10
+    ellipsoid = true
+    orbitPosition = true
+    orbitVelocity = true
+    orbitAcceleration = false
+    sizeStartMin = 0.01
+    sizeStartMax = 0.02
+    sizeEndMin = 0.01
+    sizeEndMax = 0.02
+    energyMin = 0
+    energyMax = 40000
+    colorStart = 1.0, 1.0, 1.0, 1.0
+    colorStartVar = 0.0, 0, 0, 0
+    colorEnd = 1.0, 1.0, 1.0, 1.0
+    colorEndVar = 0, 0, 0, 0
+    position = 0, 0, 0
+    positionVar = 1.5, 1.5, 15
+    velocity = 0, 0, 0
+    velocityVar = 0.01, 0.01, 0.01
+    acceleration = 0, 0, 0
+    accelerationVar = 0, 0, 0
+    rotationPerParticleSpeedMin = -1.0
+    rotationPerParticleSpeedMax = 1.0
+	rotationSpeedMin = -1.0
+	rotationSpeedMax = 1.0
+	
+}

@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.4.1)
+set(lib-path ${CMAKE_SOURCE_DIR}/libs/${ANDROID_ABI})
+set(compile-path ${CMAKE_SOURCE_DIR}/compile/${ANDROID_ABI})
+message(${lib-path})
+include_directories(${CMAKE_SOURCE_DIR}/../include)
+include_directories(src/main/cpp/include)
+
+aux_source_directory(src/main/cpp cpp_src)
+set(all_src ${cpp_src})
+add_library(AyShaderEffect SHARED ${all_src})
+target_link_libraries(AyShaderEffect ${compile-path}/libAyCoreSdk.so ${lib-path}/libShortVideoEffects.so  ${lib-path}/libae3d.so)
