@@ -27,6 +27,10 @@ public class GiftActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gift);
         mGiftView1= (AiyaEffectTextureView) findViewById(R.id.mGiftView1);
         mGiftView2= (AiyaEffectTextureView) findViewById(R.id.mGiftView2);
+        mGiftView1.forbidChangeSizeWhenSurfaceRecreate(true);
+        mGiftView2.forbidChangeSizeWhenSurfaceRecreate(true);
+        mGiftView1.pauseIfSurfaceDestroyed(true);
+        mGiftView2.pauseIfSurfaceDestroyed(true);
         mGiftView1.setEffect("assets/gift/gaokongshiai/meta.json");
         mGiftView2.setEffect("assets/gift/shiwaitaoyuan/meta.json");
 
