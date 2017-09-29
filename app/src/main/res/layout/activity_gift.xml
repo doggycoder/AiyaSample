@@ -6,14 +6,10 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@mipmap/bg" />
-    <com.aiyaapp.aiya.render.AiyaEffectTextureView
+    <com.aiyaapp.aiya.render.AiyaMutilEffectView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mGiftView1"/>
-    <com.aiyaapp.aiya.render.AiyaEffectTextureView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/mGiftView2"/>
+        android:id="@+id/mGift"/>
     <Button
         android:layout_width="60dp"
         android:layout_height="30dp"
