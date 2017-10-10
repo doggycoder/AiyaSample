@@ -28,37 +28,21 @@ public class GiftActivity extends AppCompatActivity {
         mGift= (AiyaMutilEffectView) findViewById(R.id.mGift);
         mGift.forbidChangeSizeWhenSurfaceRecreate(true);
         mGift.pauseIfSurfaceDestroyed(true);
-        mGift.setEffect(1,"assets/gift/gaokongshiai/meta.json");
-        mGift.setEffect(0,"assets/gift/shiwaitaoyuan/meta.json");
+        mGift.setEffect(AiyaMutilEffectView.Layer.TOP,"assets/gift/gaokongshiai/meta.json");
+        mGift.setEffect(AiyaMutilEffectView.Layer.BOTTOM,"assets/gift/shiwaitaoyuan/meta.json");
 
-        mGift.setAnimListener(1,new AnimListener() {
-
-            @Override
-            public void onAnimEvent(int i, int i1, String s) {
-                if(i== Const.MSG_TYPE_INFO){
-                    if(i1== AiyaGiftEffect.MSG_STAT_EFFECTS_END){
-                        Log.e("wuwang","播放完成");
-                    }else if(i1==AiyaGiftEffect.MSG_STAT_EFFECTS_START){
-                        Log.e("wuwang","播放开始");
-                    }
-                }else if(i==Const.MSG_TYPE_ERROR){
-                    Log.e("wuwang","错误："+i+"/"+i1+"/"+s);
-                }
-            }
-        });
-
-        mGift.setAnimListener(2,new AnimListener() {
+        mGift.setMultiAnimListener(new AiyaMutilEffectView.MultiAnimListener() {
 
             @Override
-            public void onAnimEvent(int i, int i1, String s) {
+            public void onAnimEvent(AiyaMutilEffectView.Layer layer, int i, int i1, String s) {
                 if(i== Const.MSG_TYPE_INFO){
                     if(i1== AiyaGiftEffect.MSG_STAT_EFFECTS_END){
-                        Log.e("wuwang","播放完成");
+                        Log.e("wuwang","播放完成:"+layer.toString());
                     }else if(i1==AiyaGiftEffect.MSG_STAT_EFFECTS_START){
-                        Log.e("wuwang","播放开始");
+                        Log.e("wuwang","播放开始:"+layer.toString());
                     }
                 }else if(i==Const.MSG_TYPE_ERROR){
-                    Log.e("wuwang","错误："+i+"/"+i1+"/"+s);
+                    Log.e("wuwang","错误："+layer.toString()+"/"+i+"/"+i1+"/"+s);
                 }
             }
         });
@@ -73,7 +57,7 @@ public class GiftActivity extends AppCompatActivity {
     public void onClick(View view){
         switch (view.getId()){
             case R.id.mBtnReplay:
-                mGift.setEffect(1,"assets/gift/gaokongshiai/meta.json");
+                mGift.setEffect(AiyaMutilEffectView.Layer.TOP,"assets/gift/gaokongshiai/meta.json");
                 break;
         }
     }
