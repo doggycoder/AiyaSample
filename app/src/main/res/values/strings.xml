@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Sample</string>
     <string name="btn_gift">礼物特效</string>
-    <string name="btn_face">脸萌特效</string>
+    <string name="btn_face">相机</string>
     <string name="btn_short_video">短视频特效</string>
     <string name="btn_scene_cut">场景转换</string>
 

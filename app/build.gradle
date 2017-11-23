@@ -14,8 +14,9 @@ android {
             enabled true
         }
         ndk{
-            abiFilters 'armeabi','x86'
+            abiFilters 'armeabi',"armeabi-v7a",'x86'
         }
+        enforceUniquePackageName = false
     }
     buildTypes {
         release {
@@ -25,7 +26,7 @@ android {
     }
     sourceSets{
         main{
-            jniLibs.srcDirs+=['../libs/core','../libs/aiyagift']
+            jniLibs.srcDirs+=['../libs/core','../libs/aiyagift','../libs/aiyatrack','../libs/shortvideo','../libs/beauty']
         }
     }
     compileOptions {
@@ -36,15 +37,20 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile fileTree(dir: '../libs/core/', include: ['*.jar'])
-    compile fileTree(dir: '../libs/aiyagift/', include: ['*.jar'])
+    compile files('../libs/core/AySdkCore.jar')
+    compile files('../libs/aiyagift/AyGift.jar')
+    compile files('../libs/aiyatrack/AyTrack.jar')
+    compile files('../libs/shortvideo/AyShaderEffect.jar')
+    compile files('../libs/beauty/AyBeauty.jar')
+
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-
-    compile 'com.wuwang.aavt:aavt:a0.0.8'
+    compile 'com.xw.repo:bubbleseekbar:3.5'
+    compile 'com.wuwang.aavt:aavt:a0.1.5'
     compile 'com.squareup.leakcanary:leakcanary-android:1.5.3'
 }

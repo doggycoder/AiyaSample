@@ -28,8 +28,8 @@ public class GiftActivity extends AppCompatActivity {
         mGift= (AiyaMutilEffectView) findViewById(R.id.mGift);
         mGift.forbidChangeSizeWhenSurfaceRecreate(true);
         mGift.pauseIfSurfaceDestroyed(true);
-        mGift.setEffect(AiyaMutilEffectView.Layer.TOP,"assets/gift/gaokongshiai/meta.json");
-        mGift.setEffect(AiyaMutilEffectView.Layer.BOTTOM,"assets/gift/shiwaitaoyuan/meta.json");
+        mGift.setEffect(AiyaMutilEffectView.Layer.TOP,"assets/modelsticker/gaokongshiai/meta.json");
+        mGift.setEffect(AiyaMutilEffectView.Layer.BOTTOM,"assets/modelsticker/shiwaitaoyuan/meta.json");
 
         mGift.setMultiAnimListener(new AiyaMutilEffectView.MultiAnimListener() {
 
@@ -60,6 +60,7 @@ public class GiftActivity extends AppCompatActivity {
             case R.id.mBtnReplay:
                 mGift.setEffect(AiyaMutilEffectView.Layer.TOP,"assets/gift/gaokongshiai/meta.json");
                 break;
+                default:break;
         }
     }
 }
